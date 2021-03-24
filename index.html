@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Hello!</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <h1>The Sound of Memory</h1>
+
+    <p>
+      Weclome to the game! Repeat back the patterns by pressing buttons!
+    </p>
+
+    <button id="startBtn" onclick="startGame()">
+      Start
+    </button>
+
+    <button id="stopBtn" class="hidden" onclick="stopGame()">
+      Stop
+    </button>
+
+    <audio
+      src="https://cdn.glitch.com/13310440-a18e-434f-9802-5cdebd35e650%2FUnderworld%20-%20Born%20Slippy%20-%20Music%20Video.mp3?v=1616134201381"
+      id="demo"
+      preload="auto"
+    ></audio>
+
+    <div id="gameButtonArea">
+      <button
+        id="button1"
+        onclick="guess(1)"
+        onmousedown="startTone(1)"
+        onmouseup="stopTone()"
+      ></button>
+      <button
+        id="button2"
+        onclick="guess(2)"
+        onmousedown="startTone(2)"
+        onmouseup="stopTone()"
+      ></button>
+      <button
+        id="button3"
+        onclick="guess(3)"
+        onmousedown="startTone(3)"
+        onmouseup="stopTone()"
+      ></button>
+      <button
+        id="button4"
+        onclick="guess(4)"
+        onmousedown="startTone(4)"
+        onmouseup="stopTone()"
+      ></button>
+      <button
+        id="button5"
+        onclick="guess(5)"
+        onmousedown="audio.currentTime=0;audio.play()"
+        onmouseup="audio.pause()"
+      ></button>
+    </div>
+  </body>
+</html>
